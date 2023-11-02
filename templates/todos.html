@@ -1,0 +1,8 @@
+<div id="todos">
+    {% for (i, todo) in todos.iter().enumerate() %}
+    <div class="todo">
+        {{ todo }}
+        <button hx-delete="/todo/{{ i }}" hx-target="#todos" hx-swap="outerHTML">X</button>
+    </div>
+    {% endfor %}
+</div>

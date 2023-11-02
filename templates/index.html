@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.6/htmx.min.js" integrity="sha512-tGWc4YBM6ag1pJndcieiU2r+lJXdzBRk70mHE13JoGeZI/QdWQkQ6q1CL1xYdJtTOfARf5oPcxJCnS6bLaM+KA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>HTMX Todos</title>
+    </head>
+    <body>
+        <form hx-post="/todo" hx-target="#todos" hx-swap="outerHTML">
+            <input id="todo" type="text" name="todo">
+            <input type="submit" value="Add Todo">
+        </form>
+
+        {% include "todos.html" %}
+    </body>
+</html>
